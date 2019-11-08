@@ -1,14 +1,23 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+
+<ion-header> 
+  <ion-toolbar>
+    <ion-title>Item List</ion-title>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+<ion-content >
+<ion-toolbar>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+</ion-toolbar>
+  <ion-list>
+    <ion-item *ngFor="let item of itemList" (click)="navigateToDetails(item)">
+      {{item.title}} <span style="float:right;">&gt;</span>
+    </ion-item>
+  </ion-list>
 </ion-content>
+<ion-footer>
+    <ion-toolbar>
+      <ion-title></ion-title>
+    </ion-toolbar>
+  </ion-footer>

@@ -1,0 +1,35 @@
+
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Details Page</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="scroll-content">
+  <ion-card ><img src="{{img}}"  height="50%" width="50%"></ion-card>
+  <div class="row">
+      <div class="column desc">
+         <b> Title :</b> 
+      </div>
+      <div class="column1 desc">
+          {{ data.title}}
+        </div>
+
+    </div>
+  
+  <div class="row">
+      <div class="column desc">
+        <b> Description :</b>  
+      </div>
+      <div class="column1 desc">
+          {{ data.tags}}
+        </div>
+
+    </div>
+
+</ion-content>
+
