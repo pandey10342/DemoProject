@@ -14,11 +14,10 @@ export class RestServiceProvider {
     console.log('Hello RestServiceProvider Provider');
   }
  
-//dummy url having dummy json uploaded on myjson.com 
+//dummy url 
 
-  apiUrl="https://api.myjson.com/bins/by3qk"
+  apiUrl="https://api.publicapis.org/entries?category=animals&https=true"
 
-  // apiUrl="../../assets/dummy.json"
   getApiData() {
     return new Promise(resolve => {
       this.http.get(this.apiUrl).subscribe(data => {

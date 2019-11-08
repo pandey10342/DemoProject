@@ -16,10 +16,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class DetailsPage {
 
   data: any;
-  img: any;
   constructor(public navCtrl: NavController,public navParams: NavParams) {
     this.data=this.navParams.get('data');
-    this.img=this.data.media.m
     console.log(JSON.stringify(this.data));
   }
 

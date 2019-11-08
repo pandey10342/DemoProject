@@ -24,7 +24,7 @@ export class HomePage {
     .then(data => {
       console.log("items :", JSON.stringify(data));
       this.allItems=data;
-      this.itemList=this.allItems.items  
+      this.itemList=this.allItems.entries  
      
     });
    
@@ -35,7 +35,7 @@ export class HomePage {
   
   
   getItems(event) {
-    this.getItemList();
+    
    console.log(this.itemList);
    const items =this.itemList;
 
@@ -45,7 +45,7 @@ export class HomePage {
    // if the value is an empty string don't filter the items
    if (query && query.trim() != '')  {
     this.itemList= items.filter(item => {
-      return(item.title.toLowerCase().indexOf(query) > -1);
+      return(item.API.toLowerCase().indexOf(query) > -1);
      });
    }else{
       this.getItemList();
